@@ -10,5 +10,5 @@ project for creative coding class 2026
   GitHub micropython-IMU/micropython-mpu9x50 (MIT License)
   (https://github.com/micropython-IMU/micropython-mpu9x50)
 
-  - Serial communication: pySerial documentation, "Short introduction"
+- Serial communication: pySerial documentation, "Short introduction"
   (https://pyserial.readthedocs.io/en/latest/shortintro.html)
