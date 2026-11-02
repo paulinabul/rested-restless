@@ -3,10 +3,6 @@
 A robot arm writes a word in light. The color of the light shows how restless the movement is:
 **blue = calm, green = in between, red = wild**.
 
-| RESTED | RESTLESS |
-| --- | --- |
-| ![RESTED](media/rested_final.jpg) | ![RESTLESS](media/restless_final.jpg) |
-
 Course project, Creative Coding (MADFM), Hochschule Pforzheim, 2026. Paulina Bulanda.
 
 ## Idea
@@ -15,9 +11,9 @@ A small motion sensor sits on a UR10e robot arm together with an RGB LED. The ar
 the word RESTED with a calm movement and the word RESTLESS with a restless movement. A
 long-exposure photo records the light trail, so you can see the difference.
 
-## How it works
+The final photos are in the folder `media/`: `rested_final.jpg` and `restless_final.jpg`.
 
-![Sensor, number, color, photo](diagrams/chain.png)
+## How it works
 
 1. The sensor (MPU6050) measures acceleration.
 2. The board (XIAO RP2040) turns it into one number for restlessness.
@@ -54,11 +50,7 @@ Wiring:
 | LED blue (with resistor) | D2 |
 | LED common leg | GND |
 
-![Wiring diagram](diagrams/wiring.png)
-
-| Breadboard setup | On the robot arm |
-| --- | --- |
-| ![Breadboard setup](media/breadboard_setup.jpg) | ![Setup on the robot arm](media/robot_arm_setup.jpg) |
+The wiring diagram is in `diagrams/wiring.png`.
 
 ## Files
 
@@ -86,6 +78,14 @@ Wiring:
 7. Robot: draw the word in Rhino, open the Grasshopper file, copy the code from the CODE
    panel and save it as a `.script` file. Load it from a USB stick on the robot's
    teach pendant.
+
+   | Setting | RESTED | RESTLESS |
+   | --- | --- | --- |
+   | ACC (acceleration, m/s²) | 0.3 | 2 |
+   | VEL (speed, m/s) | 0.15 | 0.5 |
+   | BLEND (blend radius, m) | 0.03 | 0 |
+   | Points on the curve | 300 | 300 |
+
 8. Photo: use Slow Shutter in *Light Trail* mode (light sensitivity 1/4, shutter speed
    Bulb, ISO 100) in a completely dark room. Start the photo, then start the robot.
 
@@ -97,9 +97,7 @@ distance between two points and that the whole word fits into the arm's reach.
 The first tries were taken in a bright room. The room light washes out the light trail,
 so the final photos were taken in a completely dark room.
 
-| RESTED, first try | RESTLESS, first try | Photo app settings |
-| --- | --- | --- |
-| ![RESTED, first try](media/rested_first_try.jpg) | ![RESTLESS, first try](media/restless_first_try.jpg) | ![Photo app settings](media/photo_app_settings.jpg) |
+The first tries and a screenshot of the photo app settings are in `media/` (`rested_first_try.jpg`, `restless_first_try.jpg`, `photo_app_settings.jpg`).
 
 ## Videos
 
